@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Site made with Mobirise Website Builder v5.6.5, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v5.6.5, mobirise.com">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:src" content="">
+    <meta property="og:image" content="">
+    <meta name="twitter:title" content="Recomendaciones">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}" type="image/x-icon">
+    <meta name="description" content="">
+
+
+    <title>Recomendaciones</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-grid.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-reboot.min.css' %}">
+    <link rel="stylesheet" href="{% static 'parallax/jarallax.css' %}">
+    <link rel="stylesheet" href="{% static 'dropdown/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'socicon/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'theme/css/style.css' %}">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap">
+    </noscript>
+    <link rel="preload" as="style" href="{% static 'mobirise/css/mbr-additional.css' %}">
+    <link rel="stylesheet" href="{% static 'mobirise/css/mbr-additional.css' %}" type="text/css">
+
+
+</head>
+
+<body>
+
+    <section data-bs-version="5.1" class="menu menu2 cid-sFCw1qGFAI" once="menu" id="menu2-23">
+
+        <nav class="navbar navbar-dropdown navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-brand">
+
+                    <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7"
+                            href="https://mobiri.se">Sistemas de recomendación - Taller 3 - Últimas tendencias en
+                            Sistemas de Recomendación </a></span>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+                    data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="/movies/?title=&year=">Movies</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="/user/?user_id=">User</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="/">Recomendaciones</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section data-bs-version="5.1" class="form8 cid-t5s7wiUFLe" id="form8-0">
+
+        <div class="container">
+            <div class="row">
+                <div class="mbr-section-head">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>Buscar usuario</strong>
+                    </h3>
+                </div>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                        <form action="/user/" method="GET" class="mbr-form form-with-styler mx-auto"
+                            data-form-title="Form Name"><input type="hidden">
+                            <div class="dragArea row">
+                                <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                                    <input type="text" name="user_id" placeholder="Usuario" data-form-field="name"
+                                        class="form-control" value="" id="name-form8-0">
+                                </div>
+                                <div class="col-lg-4 col-md-12 col-sm-12 mbr-section-btn align-center">
+                                    <button type="submit" class="btn btn-primary display-4">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="counter-container col-md-12 col-lg-10">
+
+                    <div class="mbr-text mbr-fonts-style display-7">
+                        <div><strong>Informacion de usuario</strong></div>
+                        <ul>
+                            <li><strong>userRatings: </strong></li>
+                            <div style="width: 300px; height: 600px;">
+                                <img src="{% static 'img/userRatings.png' %}" width="50%" height="50%">
+                            </div>
+                            <li><strong>userTags: {{ userTags }}</strong></li>
+                            <li><strong>userAverageRating: {{ userAverageRating }}</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
