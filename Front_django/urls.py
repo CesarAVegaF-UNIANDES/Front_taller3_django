@@ -21,7 +21,12 @@ from Front_django.view import *
 urlpatterns = [
     path('', loginView), 
     path('recomendaciones/', recomendacionesView),
+    path('recomendacionesN/', recomendacionesNView),
+    path('recomendacionesUser/', recomendacionesUserView),
+    path('recomendacionesMovie/', recomendacionesMovieView),
     path('movies/', moviesView),
+    path('moviesTitle/', moviesTitleView),
+    path('moviesAnio/', moviesAnioView), 
     path('user/', userView),
     # path('movie_details/', getMovieDataRequest),
     # path('movie_genres/', getMovieGenresRequest),
@@ -35,7 +40,6 @@ urlpatterns = [
     # path('user_tags/', getUserTagsRequest),
     # path('user_average_rating/', getUserAverageRatingRequest),
     # path('rec_engine_content/', getRecContentRequest),
-    # path('rec_engine_collab/', getRecCollabRequest), 
-    # path('rec_engine_gender/', getRecCollabGenderRequest)
+    # path('rec_engine_collab/', getRecCollabRequest)
 ]
 

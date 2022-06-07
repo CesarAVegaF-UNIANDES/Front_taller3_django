@@ -82,41 +82,41 @@
                         <strong>Buscar usuario</strong>
                     </h3>
                 </div>
-                <div class="row justify-content-center mt-4">
-                    <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                        <form action="/user/" method="GET" class="mbr-form form-with-styler mx-auto"
-                            data-form-title="Form Name"><input type="hidden">
-                            <div class="dragArea row">
-                                <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="name">
-                                    <input type="text" name="user_id" placeholder="Usuario" data-form-field="name"
-                                        class="form-control" value="" id="name-form8-0">
-                                </div>
-                                <div class="col-lg-4 col-md-12 col-sm-12 mbr-section-btn align-center">
-                                    <button type="submit" class="btn btn-primary display-4">Buscar</button>
-                                </div>
-                            </div>
-                        </form>
+            </div>
+            <div class="row justify-content-center mt-4">
+                <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                    <form action="/user/" method="GET" class="mbr-form form-with-styler mx-auto"
+                    data-form-title="Form Name"><input type="hidden">
+                    <div class="dragArea row">
+                        <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="user_id" placeholder="Usuario" data-form-field="name"
+                                class="form-control" value="" id="name-form8-0">
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 mbr-section-btn align-center">
+                            <button type="submit" class="btn btn-primary display-4">Buscar</button>
+                        </div>
                     </div>
+                </form>
                 </div>
             </div>
-
-            <div class="row justify-content-center">
-                <div class="counter-container col-md-12 col-lg-10">
-
-                    <div class="mbr-text mbr-fonts-style display-7">
-                        <div><strong>Informacion de usuario</strong></div>
-                        <ul>
-                            <li><strong>userRatings: </strong></li>
-                            <div style="width: 300px; height: 600px;">
-                                <img src="{% static 'img/userRatings.png' %}" width="50%" height="50%">
-                            </div>
-                            <li><strong>userTags: {{ userTags }}</strong></li>
+            <br>
+            <section data-bs-version="5.1" class="image4 cid-t815CNgiI6" id="image4-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <li><strong>userTags: </strong></li>
+                            {{ userTags }}
                             <li><strong>userAverageRating: {{ userAverageRating }}</strong></li>
-                        </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="name">
+                            <div class="image-wrapper">
+                                <strong>Mis Calificaciones</strong>
+                                <img src="{% static 'img/userRatings.png' %}" alt="Realice una consulta">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
     </section>
 
 </body>

@@ -78,23 +78,22 @@
         <div class="container">
             <div class="row">
                 <div class="mbr-section-head">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+                <div class="mbr-section-head">
                     <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                        <strong>Buscar usuario</strong>
+                        <strong>Top Calificaciones</strong>
                     </h3>
                 </div>
                 <div class="row justify-content-center mt-4">
                     <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
-                        <form action="/recomendaciones/" method="GET" class="mbr-form form-with-styler mx-auto"
+                        <form action="/recomendacionesN/" method="GET" class="mbr-form form-with-styler mx-auto"
                             data-form-title="Form Name"><input type="hidden">
                             <div class="dragArea row">
-                                <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="name">
-                                    <input type="text" name="user_id" placeholder="Usuario" data-form-field="name"
-                                        class="form-control" value="" id="name-form8-0">
-                                </div>
-                                <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="name">
-                                    <input type="text" name="title" placeholder="Title" data-form-field="name"
-                                        class="form-control" value="" id="name-form8-0">
-                                </div>
                                 <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="name">
                                     <input type="text" name="n" placeholder="Top n" data-form-field="name"
                                         class="form-control" value="" id="name-form8-0">
@@ -107,37 +106,100 @@
                     </div>
                 </div>
             </div>
+            <section data-bs-version="5.1" class="image4 cid-t815CNgiI6" id="image4-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="image-wrapper">
+                                <img id="movieTopN" src="{% static 'img/movieTopN.png' %}" alt="Realice una consulta">
+                                <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">
+                                    Top películas con mejor calificación</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <div class="image-wrapper">
+                                <img src="{% static 'img/movieNMostRated.png' %}" alt="Realice una consulta">
+                                <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">
+                                    Las más calificadas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </section>
 
-            <div class="row justify-content-center">
-                <div class="counter-container col-md-12 col-lg-10">
-
-                    <div class="mbr-text mbr-fonts-style display-7">
-                        <div><strong>Top recomendados</strong></div>
-                        <ul>
-                            <li><strong>movieTopN: </strong></li>
-                            <div style="width: 300px; height: 600px;">
-                                <img src="{% static 'img/movieTopN.png' %}" width="50%" height="50%">
+    <section data-bs-version="5.1" class="form4 cid-t815THQLcV mbr-fullscreen" id="form4-2">
+        <div class="container">
+            <div class="row content-wrapper justify-content-center">
+                <div class="mbr-section-head">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>Recomendaciones por contenido</strong>
+                    </h3>
+                    <br>
+                </div>
+                <div class="col-lg-3 offset-lg-1 mbr-form" data-form-type="formoid">
+                    <form action="/recomendacionesMovie/" method="GET" class="mbr-form form-with-styler"
+                        data-form-title="Form Name">
+                        <div class="dragArea row">
+                            <div class="col-lg-12 col-md col-12 form-group mb-3" data-for="name">
+                                <input type="text" name="title" placeholder="Title" data-form-field="name"
+                                    class="form-control" value="" id="name-form8-0">
                             </div>
-                            <li><strong>movieNMostRated: </strong></li>
-                            <div style="width: 300px; height: 600px;">
-                                <img src="{% static 'img/movieNMostRated.png' %}" width="50%" height="50%">
+                            <div class="col-lg-12 col-md col-12 form-group mb-3" data-for="name">
+                                <input type="text" name="n" placeholder="Top n" data-form-field="name"
+                                    class="form-control" value="" id="name-form8-0">
                             </div>
-                        </ul>
-                        <div><strong>Recomendados</strong></div>
-                        <ul>
-                            <li><strong>recContent: </strong></li>
-                            <div style="width: 300px; height: 600px;">
-                                <img src="{% static 'img/recContent.png' %}" width="50%" height="50%">
+                            <div class="col-12 col-md-auto mbr-section-btn">
+                                <button type="submit" class="btn btn-secondary display-4">Buscar</button>
                             </div>
-                            <li><strong>recCollab: {{ recCollab }}</strong></li>
-                            <li><strong>recCollabGender: {{ recCollabGender }}</strong></li>
-                        </ul>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-7 offset-lg-1 col-12">
+                    <div class="image-wrapper">
+                        <img class="w-100" src="{% static 'img/recContent.png' %}" alt="Realice una consulta">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section data-bs-version="5.1" class="form4 cid-t815THQLcV mbr-fullscreen" id="form4-2">
+        <div class="container">
+            <div class="row content-wrapper justify-content-center">
+                <div class="mbr-section-head">
+                    <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                        <strong>Recomendaciones por colaboración</strong>
+                    </h3>
+                    <br>
+                </div>
+                <div class="col-lg-3 offset-lg-1 mbr-form" data-form-type="formoid">
+                    <form action="/recomendacionesUser/" method="GET" class="mbr-form form-with-styler"
+                        data-form-title="Form Name">
+                        <div class="dragArea row">
+                            <div class="col-lg-12 col-md col-12 form-group mb-3" data-for="name">
+                                <input type="text" name="user_id" placeholder="Userio" data-form-field="name"
+                                    class="form-control" value="" id="name-form8-0">
+                            </div>
+                            <div class="col-lg-12 col-md col-12 form-group mb-3" data-for="name">
+                                <input type="text" name="n" placeholder="Top n" data-form-field="name"
+                                    class="form-control" value="" id="name-form8-0">
+                            </div>
+                            <div class="col-12 col-md-auto mbr-section-btn">
+                                <button type="submit" class="btn btn-secondary display-4">Buscar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-7 offset-lg-1 col-12">
+                    <div class="image-wrapper">
+                        <img class="w-100" src="{% static 'img/recCollab.png' %}" alt="Realice una consulta">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 </body>
 
 </html>
